@@ -11,7 +11,7 @@ namespace GenericsIntro
         // Kendi listemizi oluşturcaz
         T[] items;
 
-        //constructor - newlediğimiz anda çalışan bloğa denir.
+        //constructor - yapıcı metot - newlediğimiz anda çalışan bloğa denir.
         public MyList()
         {
             items = new T[0];
@@ -27,6 +27,17 @@ namespace GenericsIntro
             }
 
             items[items.Length - 1] = item;
+        }
+        
+        // eleman sayısı için
+        public int Length
+        {
+            get { return items.Length; }
+        }
+
+        public T[] Items
+        {
+            get { return items; }
         }
 
     }
